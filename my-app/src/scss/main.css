@@ -179,7 +179,12 @@ footer {
   background-color: rgba(101, 153, 128, 0.8);
   color: #32363f;
   padding: .8rem;
-  border-radius: 10px; }
+  border-radius: 10px;
+  height: 100%;
+  width: 33%vw;
+  -webkit-box-shadow: 3px 3px 5px 0px #32363f;
+  -moz-box-shadow: 3px 3px 5px 0px #32363f;
+  box-shadow: 3px 3px 5px 0px #32363f; }
 
 img.flag {
   display: inline-block;
@@ -199,15 +204,19 @@ img.flag {
   color: #74020b;
   padding: .5rem 0; }
 
-.showForm {
-  padding: .3rem;
+.formBtn {
+  font-weight: bold;
+  padding: .5rem;
+  margin: .5rem 0;
   border-radius: 5px;
   display: inline-block;
   background-color: rgba(50, 54, 63, 0.4);
   cursor: pointer;
   -webkit-box-shadow: 2px 2px 4px 0px #32363f;
   -moz-box-shadow: 2px 2px 4px 0px #32363f;
-  box-shadow: 2px 2px 4px 0px #32363f; }
+  box-shadow: 2px 2px 4px 0px #32363f;
+  border: none;
+  color: #74020b; }
 
 input[type=text], input[type=number] {
   width: 100%;
@@ -220,6 +229,10 @@ input[type=text], input[type=number] {
 
 .formStyle label {
   padding: .5rem 0 .1rem 0; }
+
+addNoteBtn {
+  background-color: rgba(116, 2, 11, 0.4);
+  color: #32363f; }
 
 .notesContainer {
   display: flex;
@@ -238,7 +251,10 @@ input[type=text], input[type=number] {
   border-radius: 5px;
   font-weight: bold;
   color: #32363f;
-  margin: .3rem; }
+  margin: .3rem;
+  -webkit-box-shadow: 2px 2px 4px 0px #32363f;
+  -moz-box-shadow: 2px 2px 4px 0px #32363f;
+  box-shadow: 2px 2px 4px 0px #32363f; }
 
 .deleteBtn {
   background-color: rgba(116, 2, 11, 0.5); }

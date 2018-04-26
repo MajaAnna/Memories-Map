@@ -17,6 +17,9 @@
   font-weight: bold;
   color:$darkColor;
   margin:.3rem;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
 }
 
 .deleteBtn{

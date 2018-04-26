@@ -1,5 +1,7 @@
-.showForm{
-  padding:.3rem;
+.formBtn{
+  font-weight: bold;
+  padding:.5rem;
+  margin: .5rem 0;
   border-radius:5px;
   //margin:.5rem;
   display:inline-block;
@@ -8,6 +10,8 @@
   -webkit-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
   -moz-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
   box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  border: none;
+  color:$accentColorSecond;
 }
 
 input[type=text], input[type=number]{
@@ -23,4 +27,9 @@ input[type=text], input[type=number]{
 
 .formStyle label{
   padding:.5rem 0 .1rem 0;
+}
+
+addNoteBtn{
+  background-color:rgba($accentColorSecond,.4);
+  color:$darkColor;
 }
