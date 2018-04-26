@@ -28,9 +28,9 @@ class MapSimple extends React.Component {
         this.state = {
             selected: [],
             tooltipText: '',
-            data:false,
-            showInfo:false,
-            newStateFromForm: localStorageNotes === null ? [] : localStorageNotes
+            data:false, //for fetch
+            showInfo:false, //for information
+            newStateFromForm: localStorageNotes === null ? [] : localStorageNotes //if the LS is empty, show empty array (nothing), if there is sth, show it
         }
     }
 
@@ -66,12 +66,17 @@ class MapSimple extends React.Component {
     //adds new note using values from form
     addNewNote = (formData) =>{
 
-        //pobieram dane
+        //parsing data from string into JS object
+        //The getItem() method of the Storage interface, when passed a key name, will return that key's value.
+        //var aValue = storage.getItem(keyName);
         let localStorageNotes = JSON.parse( localStorage.getItem('notes') );
 
         //jeśli LS jest równe null, czyli jest puste (null to obiekt)
         //to wrzucamy obiekt formData, przekazany w parametrze funkcji
         //na poziomie komponentu Form, czyli this.state z form - czyli wpisane value w inputy
+
+        //if the LS is empty, then it's first object is the one from function's parameter
+        //else we push object from the parameter to the array of previously added objects
         if( localStorageNotes === null ){
             localStorageNotes = [formData]
         } else {
@@ -81,9 +86,14 @@ class MapSimple extends React.Component {
         }
 
         //a teraz chcemy wyświetlać nasz obiekt z LS
+
+        //JSON.stringify() method converts a JavaScript value to a JSON string
+        //The setItem() method of the Storage interface, when passed a key name and value, will add that key to the storage, or update that key's value if it already exists
+        //storage.setItem(keyName, keyValue);
         localStorage.setItem('notes', JSON.stringify( localStorageNotes ) );
 
         this.setState({
+            //destructuring, since it is an ARRAY of OBJECTS
             newStateFromForm: [...this.state.newStateFromForm, formData]
         })
 
@@ -108,6 +118,7 @@ class MapSimple extends React.Component {
         console.log( changedObject, index, key)
 
 
+        //rozbijamy tablicę na obiekty
         let tempArray = [...this.state.newStateFromForm]
         tempArray[ index ][ key ] = changedObject
 
