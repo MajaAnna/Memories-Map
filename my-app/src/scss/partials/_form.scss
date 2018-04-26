@@ -1,3 +1,15 @@
+.showForm{
+  padding:.3rem;
+  border-radius:5px;
+  //margin:.5rem;
+  display:inline-block;
+  background-color:rgba($darkColor,.4);
+  cursor:pointer;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+}
+
 input[type=text], input[type=number]{
   width:100%;
   padding:.3rem;

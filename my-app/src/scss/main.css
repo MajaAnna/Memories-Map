@@ -199,6 +199,16 @@ img.flag {
   color: #74020b;
   padding: .5rem 0; }
 
+.showForm {
+  padding: .3rem;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: rgba(50, 54, 63, 0.4);
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 4px 0px #32363f;
+  -moz-box-shadow: 2px 2px 4px 0px #32363f;
+  box-shadow: 2px 2px 4px 0px #32363f; }
+
 input[type=text], input[type=number] {
   width: 100%;
   padding: .3rem;

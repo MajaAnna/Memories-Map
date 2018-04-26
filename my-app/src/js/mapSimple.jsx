@@ -150,7 +150,7 @@ class MapSimple extends React.Component {
                                     })
                                 }
                             </p>
-                            <p onClick={this.showForm} className='question'>Do you want to travel there? Plan your journey!</p>
+                            <p className='question'>Do you want to travel there? <span className='boldSpan showForm' onClick={this.showForm} >Plan your journey!</span></p>
 
                             {
                                 this.state.showForm === true && <Form addNewNotesContainer={this.addNewNote}/>
