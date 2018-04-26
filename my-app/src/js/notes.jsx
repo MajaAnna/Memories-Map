@@ -104,13 +104,13 @@ class Goal extends React.Component{
                     this.state.disabled ? <h1>Cel podróży: {this.state.goal}</h1>
                         :
                         <h1>Cel podróży:
-                            <p style={{backgroundColor:'pink'}}>
+                            <div style={{backgroundColor:'pink'}}>
                                 <ContentEditable
                                     html={this.state.goal}
                                     disabled={false}
                                     onChange={this.handleChange}
                                 />
-                            </p>
+                            </div>
                         </h1>
 
                 }

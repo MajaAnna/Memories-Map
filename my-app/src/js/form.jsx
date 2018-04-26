@@ -125,19 +125,4 @@ class Form extends React.Component {
     }
 }
 
-
-
-// class AddBtn extends React.Component {
-//     addNote = () => {
-//         console.log('klikADD')
-//     }
-//     render() {
-//         return (
-//             <button onClick={this.addNote}>Add</button>
-//         )
-//     }
-// }
-
-
-
 export { Form };

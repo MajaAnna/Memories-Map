@@ -29,7 +29,8 @@ class MapSimple extends React.Component {
             selected: [],
             tooltipText: '',
             data:false, //for fetch
-            showInfo:false, //for information
+            showForm:false, //for form
+            showInfo:false,
             newStateFromForm: localStorageNotes === null ? [] : localStorageNotes //if the LS is empty, show empty array (nothing), if there is sth, show it
         }
     }
@@ -43,57 +44,47 @@ class MapSimple extends React.Component {
 
     //loading data from api when country clicked
     handleClick = (geography) => {
-
         fetch(`https://restcountries.eu/rest/v2/alpha/${geography.id}`).then( response =>{
             return response.json()
         }).then(data =>{
             // console.log(data);
             this.setState({
-                data
+                data,
+                showInfo:true
             })
         }).catch(err => {
             console.log(err)
         })
     }
 
-    //shows information about the countries
-    showInfo = () => {
+    //closing info after clicking on 'x' icon
+    closeInfo = () => {
         this.setState({
-            showInfo:true
+            showInfo:false
+        })
+        console.log('close info')
+    }
+
+
+    //shows information about the countries
+    showForm = () => {
+        this.setState({
+            showForm:true
         })
     }
 
     //adds new note using values from form
     addNewNote = (formData) =>{
 
-        //parsing data from string into JS object
-        //The getItem() method of the Storage interface, when passed a key name, will return that key's value.
-        //var aValue = storage.getItem(keyName);
         let localStorageNotes = JSON.parse( localStorage.getItem('notes') );
-
-        //jeśli LS jest równe null, czyli jest puste (null to obiekt)
-        //to wrzucamy obiekt formData, przekazany w parametrze funkcji
-        //na poziomie komponentu Form, czyli this.state z form - czyli wpisane value w inputy
-
-        //if the LS is empty, then it's first object is the one from function's parameter
-        //else we push object from the parameter to the array of previously added objects
         if( localStorageNotes === null ){
             localStorageNotes = [formData]
         } else {
-
-            //pushujemy obiekt formData do tablicy
             localStorageNotes.push( formData )
         }
-
-        //a teraz chcemy wyświetlać nasz obiekt z LS
-
-        //JSON.stringify() method converts a JavaScript value to a JSON string
-        //The setItem() method of the Storage interface, when passed a key name and value, will add that key to the storage, or update that key's value if it already exists
-        //storage.setItem(keyName, keyValue);
         localStorage.setItem('notes', JSON.stringify( localStorageNotes ) );
 
         this.setState({
-            //destructuring, since it is an ARRAY of OBJECTS
             newStateFromForm: [...this.state.newStateFromForm, formData]
         })
 
@@ -101,7 +92,6 @@ class MapSimple extends React.Component {
 
     deleteNote = (id) => {
         let newArray = this.state.newStateFromForm.filter((element, index)=>{
-            //ma nam zwrócić tablicę, w której nie ma danego id
             return id !== index
         })
 
@@ -109,25 +99,19 @@ class MapSimple extends React.Component {
             newStateFromForm: newArray
         })
 
-        //to nam wyświetla nasz obiekt
         localStorage.setItem('notes', JSON.stringify( newArray ) );
     }
 
     editNote = (changedObject, index, key) => {
-
         console.log( changedObject, index, key)
 
-
-        //rozbijamy tablicę na obiekty
         let tempArray = [...this.state.newStateFromForm]
         tempArray[ index ][ key ] = changedObject
-
 
         this.setState({
             newStateFromForm: tempArray
         })
 
-        //tu wyświetlamy
         localStorage.setItem('notes', JSON.stringify( tempArray ) );
     }
 
@@ -136,43 +120,46 @@ class MapSimple extends React.Component {
         //INFORMATION ABOUT THE COUNTRY
         let res;
 
-        //at the beginning
+        //in the beginning
         if(this.state.data === false){
             res = null
-
         //when country is clicked
         } else {
-            res =
-                <div className='info'>
-                    <div className='inforHeader'>
-                        <img className='flag' src={this.state.data.flag} alt='flag'/>
-                        <h2 className='infoTitle'>{this.state.data.name}</h2>
-                        <span>X</span>
-                    </div>
-                    <div className='infoBody'>
-                        <p><span className='boldSpan'>Native name: </span>{this.state.data.nativeName}</p>
-                        <p><span className='boldSpan'>Capital: </span>{this.state.data.capital}</p>
-                        <p><span className='boldSpan'>Currencies: </span>
-                        {
-                            this.state.data.currencies.map((curr) => {
-                                return <span> code: {curr.code}, name: {curr.name}, symbol: {curr.symbol}</span>
-                            })
-                        }
-                        </p>
-                        <p><span className='boldSpan'>Languages: </span>
-                        {
-                            this.state.data.languages.map((lang) => {
-                                return <span>{lang.name}</span>
-                            })
-                        }
-                        </p>
-                        <p onClick={this.showInfo} className='question'>Do you want to travel there? Plan your journey!</p>
+            if(this.state.showInfo === true){
+                res =
+                    <div className='info'>
+                        <div className='inforHeader'>
+                            <img className='flag' src={this.state.data.flag} alt='flag'/>
+                            <h2 className='infoTitle'>{this.state.data.name}</h2>
+                            <span className='icon-cancel-circled icons' onClick={this.closeInfo}></span>
+                        </div>
+                        <div className='infoBody'>
+                            <p><span className='boldSpan'>Native name: </span>{this.state.data.nativeName}</p>
+                            <p><span className='boldSpan'>Capital: </span>{this.state.data.capital}</p>
+                            <p><span className='boldSpan'>Currencies: </span>
+                                {
+                                    this.state.data.currencies.map((curr) => {
+                                        return <span> code: {curr.code}, name: {curr.name}, symbol: {curr.symbol}</span>
+                                    })
+                                }
+                            </p>
+                            <p><span className='boldSpan'>Languages: </span>
+                                {
+                                    this.state.data.languages.map((lang) => {
+                                        return <span>{lang.name}</span>
+                                    })
+                                }
+                            </p>
+                            <p onClick={this.showForm} className='question'>Do you want to travel there? Plan your journey!</p>
 
-                        {
-                            this.state.showInfo === true && <Form addNewNotesContainer={this.addNewNote}/>
-                        }
+                            {
+                                this.state.showForm === true && <Form addNewNotesContainer={this.addNewNote}/>
+                            }
+                        </div>
                     </div>
-                </div>
+            } else {
+                res =  null
+            }
         }
         return (
             <div className='centerContainer notesContainer'>
