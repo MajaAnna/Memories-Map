@@ -83,7 +83,6 @@ class OneNote extends React.Component{
     }
 }
 
-
 class Goal extends React.Component{
     constructor(props){
         super(props)
@@ -212,7 +211,6 @@ class NumberOfNights extends React.Component{
     }
 
     editBtn = () => {
-        console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -268,7 +266,6 @@ class Accomodation extends React.Component{
     }
 
     editBtn = () => {
-        console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -324,7 +321,6 @@ class Transportation extends React.Component{
     }
 
     editBtn = () => {
-        // console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -380,7 +376,6 @@ class Food extends React.Component{
     }
 
     editBtn = () => {
-        console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -436,7 +431,6 @@ class OtherCosts extends React.Component{
     }
 
     editBtn = () => {
-        // console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
