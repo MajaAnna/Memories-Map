@@ -32,13 +32,13 @@ class Form extends React.Component {
         //text
         if(this.state.goal.length === 0 || this.state.link.length === 0){
             error = true
-            messages.push(<p>Nie wpisano żadnego znaku!</p>)
+            messages.push(<p key='messageSign'>Nie wpisano żadnego znaku!</p>)
         }
 
         //numbers
         if(this.state.numberOfNights < 1){
             error = true
-            messages.push(<p>Liczba nocy nie może być mniejsza od 1!</p>)
+            messages.push(<p key='messageNumbers'>Liczba nocy nie może być mniejsza od 1!</p>)
         }
 
         this.setState({

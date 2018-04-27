@@ -20,8 +20,8 @@ import { MainContent } from './mainContent.jsx';
 class App extends React.Component{
     render(){
         return(
-            <div className='mainContainer' key='divApp'>
-                <HashRouter key='hashRouter'>
+            <div className='mainContainer'>
+                <HashRouter>
                     <div>
                         <Header/>
                         <MainContent/>

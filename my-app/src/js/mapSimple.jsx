@@ -63,7 +63,6 @@ class MapSimple extends React.Component {
         this.setState({
             showInfo:false
         })
-        console.log('close info')
     }
 
 
