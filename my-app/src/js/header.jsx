@@ -24,20 +24,17 @@ class Navigation extends React.Component{
                     <li key='home'>
                         <NavLink exact to='/'
                                  className='navText'
-                                 activeClassName="active"
-                                 key='navLinkHome'>Home</NavLink>
+                                 activeClassName="active">Home</NavLink>
                     </li>
                     <li key='map'>
                         <NavLink to='/map'
                                  className='navText'
-                                 activeClassName="active"
-                                 key='navLinkMap'>Mapa</NavLink>
+                                 activeClassName="active">Mapa</NavLink>
                     </li>
                     <li key='aboutProject'>
                         <NavLink to='/aboutProject'
                                  className='navText'
-                                 activeClassName="active"
-                                 key='navLinkAboutProject'>O projekcie</NavLink>
+                                 activeClassName="active">O projekcie</NavLink>
                     </li>
                 </ul>
             </nav>

@@ -104,7 +104,7 @@ class MapSimple extends React.Component {
     }
 
     editNote = (changedObject, index, key) => {
-        console.log( changedObject, index, key)
+        // console.log( changedObject, index, key)
 
         let tempArray = [...this.state.newStateFromForm]
         tempArray[ index ][ key ] = changedObject

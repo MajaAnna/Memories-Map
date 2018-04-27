@@ -47,26 +47,32 @@ class OneNote extends React.Component{
                 <Links link={this.props.link}
                        id='link'
                        key='link'
+                       index={this.props.index}
                        editNote={this.props.editNote}/>
                 <NumberOfNights numberOfNights={this.props.numberOfNights}
                                 id='numberOfNights'
                                 key='numberOfNights'
+                                index={this.props.index}
                                 editNote={this.props.editNote}/>
                 <Accomodation accomodation={this.props.accomodation}
                               id='accomodation'
                               key='accomodation'
+                              index={this.props.index}
                               editNote={this.props.editNote}/>
                 <Transportation transportation={this.props.transportation}
                                 id='transportation'
                                 key='transportation'
+                                index={this.props.index}
                                 editNote={this.props.editNote}/>
                 <Food food={this.props.food}
                       id='food'
                       key='food'
+                      index={this.props.index}
                       editNote={this.props.editNote}/>
                 <OtherCosts other={this.props.other}
                             id='other'
                             key='other'
+                            index={this.props.index}
                             editNote={this.props.editNote}/>
                 <button onClick={this.deleteBtn}
                         id='deleteBtn'
@@ -91,12 +97,11 @@ class Goal extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.goal, this.props.index, 'goal' );
+            this.props.editNote( this.state.goal, this.props.index, this.props.id );
         }
     }
 
     editBtn = () => {
-        console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -147,12 +152,11 @@ class Links extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.link, this.props.index, 'link' );
+            this.props.editNote( this.state.link, this.props.index, this.props.id );
         }
     }
 
     editBtn = () => {
-        console.log('edit');
         this.setState({
             disabled: this.state.disabled ? false : true,
             editBtn:this.state.editBtn === 'Edit'? 'Ok' : 'Edit'
@@ -203,7 +207,7 @@ class NumberOfNights extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.numberOfNights, this.props.index, 'numberOfNights' );
+            this.props.editNote( this.state.numberOfNights, this.props.index, this.props.id );
         }
     }
 
@@ -259,7 +263,7 @@ class Accomodation extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.accomodation, this.props.index, 'accomodation' );
+            this.props.editNote( this.state.accomodation, this.props.index, this.props.id );
         }
     }
 
@@ -315,7 +319,7 @@ class Transportation extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.transportation, this.props.index, 'transportation' );
+            this.props.editNote( this.state.transportation, this.props.index, this.props.id );
         }
     }
 
@@ -371,7 +375,7 @@ class Food extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.food, this.props.index, 'food' );
+            this.props.editNote( this.state.food, this.props.index, this.props.id );
         }
     }
 
@@ -427,7 +431,7 @@ class OtherCosts extends React.Component{
 
     editNote = () => {
         if ( typeof this.props.editNote === 'function' ){
-            this.props.editNote( this.state.other, this.props.index, 'other' );
+            this.props.editNote( this.state.other, this.props.index, this.props.id );
         }
     }
 
