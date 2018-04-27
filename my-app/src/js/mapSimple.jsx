@@ -28,6 +28,7 @@ class MapSimple extends React.Component {
         this.state = {
             selected: [],
             tooltipText: '',
+            value: 'Plan your journey!',
             data:false, //for fetch
             showForm:false, //for form
             showInfo:false,
@@ -69,7 +70,8 @@ class MapSimple extends React.Component {
     //shows information about the countries
     showForm = () => {
         this.setState({
-            showForm:true
+            showForm:this.state.showForm === false ? true : false,
+            value: this.state.value === 'Plan your journey!' ? 'Hide form!' : 'Plan your journey!'
         })
     }
 
@@ -150,7 +152,7 @@ class MapSimple extends React.Component {
                                     })
                                 }
                             </p>
-                            <p className='question'>Do you want to travel there? <button className='formBtn' onClick={this.showForm} >Plan your journey!</button></p>
+                            <p className='question'>Do you want to travel there? <button className='btn' onClick={this.showForm} >{this.state.value}</button></p>
 
                             {
                                 this.state.showForm === true && <Form addNewNotesContainer={this.addNewNote}/>

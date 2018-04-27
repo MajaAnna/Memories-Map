@@ -118,7 +118,7 @@ class Form extends React.Component {
                             onChange={this.handleFormInputs}
                         />
                     </label>
-                    <input type="submit" value="Add note" className='addNoteBtn formBtn'/>
+                    <input type="submit" value="Add note" className='addNoteBtn btn'/>
                 </form>
             </div>
         )

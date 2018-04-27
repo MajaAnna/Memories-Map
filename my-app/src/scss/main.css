@@ -5,6 +5,28 @@
   box-sizing: border-box;
   padding: 0; }
 
+.btn {
+  font-weight: bold;
+  padding: .5rem;
+  margin: .5rem 0;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: rgba(50, 54, 63, 0.4);
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 4px 0px #32363f;
+  -moz-box-shadow: 2px 2px 4px 0px #32363f;
+  box-shadow: 2px 2px 4px 0px #32363f;
+  border: none;
+  color: #74020b; }
+
+.addNoteBtn {
+  background-color: rgba(101, 153, 128, 0.4);
+  color: #32363f; }
+
+.deleteNoteBtn {
+  background-color: rgba(116, 2, 11, 0.4);
+  color: #32363f; }
+
 * {
   font-family: 'Tajawal', sans-serif; }
 
@@ -204,20 +226,6 @@ img.flag {
   color: #74020b;
   padding: .5rem 0; }
 
-.formBtn {
-  font-weight: bold;
-  padding: .5rem;
-  margin: .5rem 0;
-  border-radius: 5px;
-  display: inline-block;
-  background-color: rgba(50, 54, 63, 0.4);
-  cursor: pointer;
-  -webkit-box-shadow: 2px 2px 4px 0px #32363f;
-  -moz-box-shadow: 2px 2px 4px 0px #32363f;
-  box-shadow: 2px 2px 4px 0px #32363f;
-  border: none;
-  color: #74020b; }
-
 input[type=text], input[type=number] {
   width: 100%;
   padding: .3rem;
@@ -229,10 +237,6 @@ input[type=text], input[type=number] {
 
 .formStyle label {
   padding: .5rem 0 .1rem 0; }
-
-addNoteBtn {
-  background-color: rgba(116, 2, 11, 0.4);
-  color: #32363f; }
 
 .notesContainer {
   display: flex;
@@ -246,15 +250,9 @@ addNoteBtn {
   margin: .8rem;
   border-radius: 10px; }
 
-.btn {
-  padding: .3rem;
-  border-radius: 5px;
-  font-weight: bold;
-  color: #32363f;
-  margin: .3rem;
-  -webkit-box-shadow: 2px 2px 4px 0px #32363f;
-  -moz-box-shadow: 2px 2px 4px 0px #32363f;
-  box-shadow: 2px 2px 4px 0px #32363f; }
+.labels {
+  padding: .3rem 0; }
 
-.deleteBtn {
-  background-color: rgba(116, 2, 11, 0.5); }
+.contentEditable {
+  background-color: #d4d7cd;
+  color: #659980; }
