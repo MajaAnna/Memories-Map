@@ -141,14 +141,14 @@ class MapSimple extends React.Component {
                             <p><span className='boldSpan'>Currencies: </span>
                                 {
                                     this.state.data.currencies.map((curr) => {
-                                        return <span> code: {curr.code}, name: {curr.name}, symbol: {curr.symbol}</span>
+                                        return <span key={curr.code}> code: {curr.code}, name: {curr.name}, symbol: {curr.symbol}</span>
                                     })
                                 }
                             </p>
                             <p><span className='boldSpan'>Languages: </span>
                                 {
                                     this.state.data.languages.map((lang) => {
-                                        return <span>{lang.name}</span>
+                                        return <span key={lang.name}>{lang.name}</span>
                                     })
                                 }
                             </p>
@@ -222,6 +222,8 @@ class MapSimple extends React.Component {
                 </div>
                 {
                     this.state.newStateFromForm.length > 0 && <Notes
+                    key='notes'
+                    id='notes'
                     notes={this.state.newStateFromForm}
                     className='notesContainer'
                     deleteNote={this.deleteNote}

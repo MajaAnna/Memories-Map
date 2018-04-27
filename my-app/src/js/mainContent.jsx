@@ -16,10 +16,10 @@ class MainContent extends React.Component{
         return(
             <main>
                 <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route path='/map' component={Map}/>
-                    <Route path='/aboutProject' component={AboutProject}/>
-                    <Route component={NotFound}/>
+                    <Route key='routeHome' exact path='/' component={Home}/>
+                    <Route key='routeMap' path='/map' component={Map}/>
+                    <Route key='routeAboutProject' path='/aboutProject' component={AboutProject}/>
+                    <Route key='routeNotFound' component={NotFound}/>
                 </Switch>
             </main>
         )

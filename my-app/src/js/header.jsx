@@ -8,8 +8,8 @@ class Header extends React.Component{
         return(
             <header>
                 <div className='container flexContainer'>
-                    <div className='logo'/>
-                    <Navigation/>
+                    <div className='logo' key='logo'/>
+                    <Navigation key='navigation'/>
                 </div>
             </header>
         )
@@ -21,9 +21,24 @@ class Navigation extends React.Component{
         return(
             <nav>
                 <ul className='menu'>
-                    <li><NavLink exact to='/' className='navText' activeClassName="active">Home</NavLink></li>
-                    <li><NavLink to='/map' className='navText' activeClassName="active">Mapa</NavLink></li>
-                    <li><NavLink to='/aboutProject' className='navText' activeClassName="active">O projekcie</NavLink></li>
+                    <li key='home'>
+                        <NavLink exact to='/'
+                                 className='navText'
+                                 activeClassName="active"
+                                 key='navLinkHome'>Home</NavLink>
+                    </li>
+                    <li key='map'>
+                        <NavLink to='/map'
+                                 className='navText'
+                                 activeClassName="active"
+                                 key='navLinkMap'>Mapa</NavLink>
+                    </li>
+                    <li key='aboutProject'>
+                        <NavLink to='/aboutProject'
+                                 className='navText'
+                                 activeClassName="active"
+                                 key='navLinkAboutProject'>O projekcie</NavLink>
+                    </li>
                 </ul>
             </nav>
         )

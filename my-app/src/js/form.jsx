@@ -46,7 +46,7 @@ class Form extends React.Component {
             formError: error
         })
 
-        this.props.addNewNotesContainer(this.state)
+        error === false && this.props.addNewNotesContainer(this.state)
     }
 
     render() {
@@ -118,7 +118,7 @@ class Form extends React.Component {
                             onChange={this.handleFormInputs}
                         />
                     </label>
-                    <input type="submit" value="Add note"/>
+                    <input type="submit" value="Add note" className='btn addNoteBtn'/>
                 </form>
             </div>
         )

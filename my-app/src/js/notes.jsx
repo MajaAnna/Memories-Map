@@ -8,6 +8,8 @@ class Notes extends React.Component{
                 {
                     this.props.notes.map((object, index) => {
                         return <OneNote
+                            key={index}
+                            id='oneNote'
                             object={object}
                             goal={object.goal}
                             link={object.link}
@@ -38,21 +40,37 @@ class OneNote extends React.Component{
         return(
             <div className='note'>
                 <Goal goal={this.props.goal}
+                      id='goal'
+                      key='goal'
                       index={this.props.index}
                       editNote={this.props.editNote}/>
                 <Links link={this.props.link}
+                       id='link'
+                       key='link'
                        editNote={this.props.editNote}/>
                 <NumberOfNights numberOfNights={this.props.numberOfNights}
+                                id='numberOfNights'
+                                key='numberOfNights'
                                 editNote={this.props.editNote}/>
                 <Accomodation accomodation={this.props.accomodation}
+                              id='accomodation'
+                              key='accomodation'
                               editNote={this.props.editNote}/>
                 <Transportation transportation={this.props.transportation}
+                                id='transportation'
+                                key='transportation'
                                 editNote={this.props.editNote}/>
                 <Food food={this.props.food}
+                      id='food'
+                      key='food'
                       editNote={this.props.editNote}/>
                 <OtherCosts other={this.props.other}
+                            id='other'
+                            key='other'
                             editNote={this.props.editNote}/>
                 <button onClick={this.deleteBtn}
+                        id='deleteBtn'
+                        key='deleteBtn'
                         className='btn deleteNoteBtn'>DELETE</button>
             </div>
         )
