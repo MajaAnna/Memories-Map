@@ -153,7 +153,7 @@ class Links extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Cel podróży: {this.state.link}</h1>
+                    this.state.disabled ? <h1>Links: {this.state.link}</h1>
                         :
                         <h1 className='labels'>Links:
                             <div className='contentEditable'>
@@ -209,7 +209,7 @@ class NumberOfNights extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Cel podróży: {this.state.numberOfNights}</h1>
+                    this.state.disabled ? <h1>Number of nights: {this.state.numberOfNights}</h1>
                         :
                         <h1 className='labels'>Number of nights:
                             <div className='contentEditable'>
@@ -265,7 +265,7 @@ class Accomodation extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Cel podróży: {this.state.accomodation}</h1>
+                    this.state.disabled ? <h1>Accomodation: {this.state.accomodation}</h1>
                         :
                         <h1 className='labels'>Accomodation:
                             <div className='contentEditable'>
@@ -321,7 +321,7 @@ class Transportation extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Cel podróży: {this.state.transportation}</h1>
+                    this.state.disabled ? <h1>Transportation: {this.state.transportation}</h1>
                         :
                         <h1 className='labels'>Transportation:
                             <div className='contentEditable'>
@@ -377,7 +377,7 @@ class Food extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Cel podróży: {this.state.food}</h1>
+                    this.state.disabled ? <h1>Costs of food: {this.state.food}</h1>
                         :
                         <h1 className='labels'>Costs of food:
                             <div className='contentEditable'>
