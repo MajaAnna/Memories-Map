@@ -4,9 +4,12 @@ class Footer extends React.Component{
     render(){
         return(
             <footer>
-                <div className='container flexContainer'>
-                    <div className='half'>left part</div>
-                    <div className='half'>infos and links part</div>
+                <div className='container flexContainer footerText'>
+                    <div className='half'>Copywrite &copy;2018</div>
+                    <div className='half'>
+                        <a href='https://github.com/MajaAnna'><span className='icon-github iconBig'></span></a>
+                        <a href='https://www.linkedin.com/in/maja-przyjazna/'><span className='icon-linkedin-squared iconBig'></span></a>
+                    </div>
                 </div>
             </footer>
         )

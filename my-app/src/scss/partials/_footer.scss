@@ -1,13 +1,22 @@
 footer{
   background-color:$darkColor;
   color:$lightColorText;
-  height:10vh;
+  //height:10vh;
   border-top: 3px solid $accentColor;
   line-height:100%;
+  padding:.3rem;
 }
 
 .half{
   padding:1.5rem;
   width:50%;
   text-align:center;
+}
+
+.footerText a{
+  color:white;
+  text-decoration:none;
+}
+.footerText:hover{
+  font-weight:bold;
 }

@@ -129,7 +129,7 @@ class MapSimple extends React.Component {
             if(this.state.showInfo === true){
                 res =
                     <div className='info'>
-                        <div className='inforHeader'>
+                        <div className='infoHeader'>
                             <img className='flag' src={this.state.data.flag} alt='flag'/>
                             <h2 className='infoTitle'>{this.state.data.name}</h2>
                             <span className='icon-cancel-circled icons' onClick={this.closeInfo}></span>
