@@ -16,6 +16,14 @@
     text-align: center;
     line-height: 100%; } }
 
+@media only screen and (max-width: 460px) {
+  .note {
+    width: 100vw; } }
+
+@media only screen and (min-width: 460px) {
+  .note {
+    width: 40vw; } }
+
 @media only screen and (min-width: 321px) {
   .infoFlex {
     display: flex;
@@ -149,7 +157,7 @@
   margin: 0 auto; }
 
 .lightMapBg {
-  background-color: #d4d7cd; }
+  background-color: #f3f3f4; }
 
 .imageDescription {
   padding: 2rem;
@@ -307,7 +315,6 @@ input[type=text], input[type=number] {
 .note {
   background-color: rgba(233, 166, 85, 0.5);
   color: #32363f;
-  border: px solid #32363f;
   padding: .8rem;
   margin: .8rem;
   border-radius: 10px;
