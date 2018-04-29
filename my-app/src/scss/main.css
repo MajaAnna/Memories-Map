@@ -9,7 +9,8 @@
   .oneLine {
     padding: .3rem;
     width: 100%;
-    text-align: center; } }
+    text-align: center;
+    line-height: 100%; } }
 
 @media only screen and (min-width: 321px) {
   .half {
@@ -214,9 +215,10 @@ footer {
   border-top: 3px solid #e9a655;
   line-height: 100%;
   padding: .3rem;
-  font-size: .7rem;
-  display: flex;
-  flex-wrap: wrap; }
+  font-size: .7rem; }
+
+.flexContainer {
+  display: flex; }
 
 .footerText a {
   color: white;
@@ -224,6 +226,9 @@ footer {
 
 .footerText:hover {
   font-weight: bold; }
+
+.copy {
+  margin-top: .8rem; }
 
 .centerContainer {
   display: flex;

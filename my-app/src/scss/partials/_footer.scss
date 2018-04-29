@@ -5,15 +5,22 @@ footer{
   line-height:100%;
   padding:.3rem;
   font-size: .7rem;
-  display:flex;
-  flex-wrap: wrap;
-}
 
+}
+.flexContainer{
+  display:flex;
+
+}
 
 .footerText a{
   color:white;
   text-decoration:none;
 }
+
 .footerText:hover{
   font-weight:bold;
+}
+
+.copy{
+  margin-top:.8rem;
 }
