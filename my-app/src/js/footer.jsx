@@ -5,10 +5,10 @@ class Footer extends React.Component{
         return(
             <footer>
                 <div className='container flexContainer footerText'>
-                    <div className='half'>Copywrite &copy;2018</div>
-                    <div className='half'>
-                        <a href='https://github.com/MajaAnna'><span className='icon-github iconBig'></span></a>
-                        <a href='https://www.linkedin.com/in/maja-przyjazna/'><span className='icon-linkedin-squared iconBig'></span></a>
+                    <div className='oneLine half'>Copywrite &copy;2018</div>
+                    <div className='oneLine half'>
+                        <a href='https://github.com/MajaAnna' className='half'><span className='icon-github iconBig'></span></a>
+                        <a href='https://www.linkedin.com/in/maja-przyjazna/' className='half'><span className='icon-linkedin-squared iconBig'></span></a>
                     </div>
                 </div>
             </footer>
