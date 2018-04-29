@@ -1,3 +1,11 @@
+.mainContainer{
+  height:100vh;
+  width:100vw;
+}
+
+//.container{
+//  width:100vw;
+//}
 
 .containerSection{
   height:80vh;
@@ -8,7 +16,7 @@
   position:relative;
   top:-80vh;
   z-index:1;
-  width:100vw;
+  width:100%;
 }
 
 .mapDescription{
@@ -22,12 +30,10 @@
   letter-spacing: .5rem;
   text-align:center;
   font-size:2rem;
-  width:100%;
 }
 
 .imageText{
-  font-size: .5rem;
-  width:100%;
+  font-size: .7em;
 }
 
 .accentFontColor{

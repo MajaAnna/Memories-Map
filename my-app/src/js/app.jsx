@@ -20,9 +20,9 @@ import { MainContent } from './mainContent.jsx';
 class App extends React.Component{
     render(){
         return(
-            <div className='mainContainer'>
+            <div>
                 <HashRouter>
-                    <div>
+                    <div className='mainContainer'>
                         <Header/>
                         <MainContent/>
                         <Footer/>

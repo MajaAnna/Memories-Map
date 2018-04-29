@@ -4,7 +4,7 @@ class Home extends React.Component{
     render(){
         return(
             <section>
-                <div  className='container containerSection'>
+                <div className='container containerSection'>
                     <div className='image imageHome'></div>
                     <div className='imageDescription'>
                         <h1 className='imageTitle accentFontColor'>Home</h1>
