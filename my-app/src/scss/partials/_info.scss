@@ -5,20 +5,13 @@
 
 }
 
-.infoContainer{
-  position:absolute;
-  top:40%;
-  left:40%;
-  width:30%;
-}
-
 .info{
+  position:relative;
   background-color:rgba($lightColorSecond, .8);
   color:$darkColor;
   padding:.8rem;
   border-radius: 10px;
   height:100%;
-  width:33%vw;
   -webkit-box-shadow: 3px 3px 5px 0px rgba(50,54,63,1);
   -moz-box-shadow: 3px 3px 5px 0px rgba(50,54,63,1);
   box-shadow: 3px 3px 5px 0px rgba(50,54,63,1);

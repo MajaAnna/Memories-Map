@@ -10,6 +10,13 @@
 .containerSection{
   height:80vh;
 }
+.mapContainer{
+  margin:0 auto;
+}
+
+.lightMapBg{
+  background-color:$backgroundColor;
+}
 
 .imageDescription{
   padding:2rem;
@@ -36,18 +43,6 @@
   font-size: .7em;
 }
 
-.accentFontColor{
-  color:$accentColorSecond;
-}
-
-.mediumFontColor{
-  color:$lightColorSecond
-}
-
-.lightFontColor{
-  color:$backgroundColor;
-}
-
 //images
 .image{
   width:100%;
@@ -69,3 +64,14 @@
   opacity:.8;
 }
 
+.accentFontColor{
+  color:$accentColorSecond;
+}
+
+.mediumFontColor{
+  color:$lightColorSecond
+}
+
+.lightFontColor{
+  color:$backgroundColor;
+}

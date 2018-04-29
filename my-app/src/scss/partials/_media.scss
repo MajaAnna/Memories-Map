@@ -1,5 +1,12 @@
 //mobile first
 @media only screen and (max-width:320px){
+  //info
+  .infoContainer{
+    max-width:100%;
+  }
+  .info{
+    width:100vw;
+  }
 
   //footer
   .oneLine{
@@ -11,6 +18,26 @@
 }
 
 @media only screen and (min-width:321px){
+
+
+  //info
+  .infoFlex{
+    display:flex;
+    justify-content: center;
+
+  }
+  .infoContainer{
+    max-width:30%;
+    align-items: center;
+  }
+
+  .mapContainer{
+    max-width:100%;
+    align-items:center;
+  }
+  .info{
+    width:40vw;
+  }
 
   //footer
   .half{

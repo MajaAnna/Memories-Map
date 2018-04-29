@@ -163,62 +163,67 @@ class MapSimple extends React.Component {
             }
         }
         return (
-            <div className='centerContainer notesContainer'>
+            <section>
+                <div className='infoFlex'>
+                    <div  className='mapContainer'>
+                        {/*map*/}
+                        <div style={wrapperStyles}>
+                            <ComposableMap
+                                projectionConfig={{
+                                    scale: 205,
+                                }}
+                                width={980}
+                                height={551}
+                                style={{
+                                    width: "100%",
+                                    height: "auto",
+                                }}
+                            >
+                                <ZoomableGroup center={[0,20]} disablePanning>
+                                    <Geographies geography={Mapka} >
+                                        {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
+                                                <Geography
+                                                    key={i}
+                                                    cacheId={geography.properties.ISO_A3 + i}
+                                                    data-tip={geography.properties.name}
+                                                    geography={geography}
+                                                    projection={projection}
+                                                    onClick={this.handleClick}
+                                                    style={{
+                                                        default: {
+                                                            fill: '#d4d7cd',
+                                                            stroke: "#32363f",
+                                                            strokeWidth: 0.75,
+                                                            outline: "none",
+                                                        },
+                                                        hover: {
+                                                            fill: "#32363f",
+                                                            stroke: "#112503",
+                                                            strokeWidth: 0.75,
+                                                            outline: "none",
+                                                        },
+                                                        pressed: {
+                                                            fill: "#e9a655",
+                                                            stroke: "#32363f",
+                                                            strokeWidth: 0.75,
+                                                            outline: "none",
+                                                        },
+                                                    }}
+                                                />
+                                            )
+                                        )}
+                                    </Geographies>
+                                </ZoomableGroup>
+                            </ComposableMap>
+                            <ReactTooltip border={true}/>
+                        </div>
+                    </div>
+                </div>
+
 
                 {/*information about the country*/}
-                <div className='infoContainer'>{res}</div>
+                <div className='infoFlex'><div className='infoContainer'>{res}</div></div>
 
-                {/*map*/}
-                <div style={wrapperStyles}>
-                    <ComposableMap
-                        projectionConfig={{
-                            scale: 205,
-                        }}
-                        width={980}
-                        height={551}
-                        style={{
-                            width: "100%",
-                            height: "auto",
-                        }}
-                    >
-                        <ZoomableGroup center={[0,20]} disablePanning>
-                            <Geographies geography={Mapka}>
-                                {(geographies, projection) => geographies.map((geography, i) => geography.id !== "ATA" && (
-                                            <Geography
-                                                key={i}
-                                                cacheId={geography.properties.ISO_A3 + i}
-                                                data-tip={geography.properties.name}
-                                                geography={geography}
-                                                projection={projection}
-                                                onClick={this.handleClick}
-                                                style={{
-                                                    default: {
-                                                        fill: '#d4d7cd',
-                                                        stroke: "#32363f",
-                                                        strokeWidth: 0.75,
-                                                        outline: "none",
-                                                    },
-                                                    hover: {
-                                                        fill: "#32363f",
-                                                        stroke: "#112503",
-                                                        strokeWidth: 0.75,
-                                                        outline: "none",
-                                                    },
-                                                    pressed: {
-                                                        fill: "#e9a655",
-                                                        stroke: "#32363f",
-                                                        strokeWidth: 0.75,
-                                                        outline: "none",
-                                                    },
-                                                }}
-                                            />
-                                        )
-                                )}
-                            </Geographies>
-                        </ZoomableGroup>
-                    </ComposableMap>
-                    <ReactTooltip border={true}/>
-                </div>
                 {
                     this.state.newStateFromForm.length > 0 && <Notes
                     key='notes'
@@ -229,7 +234,7 @@ class MapSimple extends React.Component {
                     editNote={this.editNote}
                     />
                 }
-            </div>
+            </section>
         )
     }
 }

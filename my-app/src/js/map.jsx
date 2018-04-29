@@ -5,7 +5,7 @@ import { MapSimple } from './mapSimple.jsx';
 class Map extends React.Component{
     render(){
         return(
-            <section>
+            <section className='lightMapBg'>
                 <div className='container'>
                     <div className='mapDescription'>
                         <h1 className='imageTitle accentFontColor'>The memories map</h1>
