@@ -8,8 +8,7 @@ class Header extends React.Component{
         return(
             <header>
                 <div className='container flexContainer'>
-                    <div className='logo' key='logo'/>
-                    <Navigation key='navigation'/>
+                    <Navigation/>
                 </div>
             </header>
         )

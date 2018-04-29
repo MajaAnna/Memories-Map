@@ -1,5 +1,9 @@
 //mobile first
 @media only screen and (max-width:320px){
+  .container{
+    width:100vw;
+  }
+
   //footer
   .oneLine{
     padding:.3rem;
@@ -9,6 +13,10 @@
 }
 
 @media only screen and (min-width:321px){
+  .container{
+    width:80%;
+    margin: 0 auto;
+  }
   //footer
   .half{
     padding:.3rem;

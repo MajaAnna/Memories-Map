@@ -1,9 +1,10 @@
 header{
   background-color:$darkColor;
   color:$lightColorText;
-  height:10vh;
   border-bottom: 3px solid $accentColor;
   line-height:100%;
+  width:100%;
+  padding:.3rem;
 }
 
 .flexContainer{
