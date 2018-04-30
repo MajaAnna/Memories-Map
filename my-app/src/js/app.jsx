@@ -1,15 +1,9 @@
 import React from 'react';
 import {
     HashRouter
-    // ,Route,
-    // Link,
-    // Switch,
-    // NavLink
 } from 'react-router-dom';
 
 import '../scss/main.css';
-
-// import { RenderApi } from './renderApi.jsx';
 import { Header } from './header.jsx';
 import { Footer } from './footer.jsx';
 import { MainContent } from './mainContent.jsx';

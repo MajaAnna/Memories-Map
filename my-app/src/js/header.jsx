@@ -3,6 +3,7 @@ import {
     NavLink
 } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
+import "../../node_modules/animate.css/animate.min.css";
 
 class Header extends React.Component{
     render(){
@@ -23,7 +24,8 @@ class Navigation extends React.Component{
         this.state={
             showMenu:false,
             hamburgerShow:true,
-            hideMenu:false
+            hideMenu:false,
+            selected: false
         }
     }
 
@@ -44,26 +46,65 @@ class Navigation extends React.Component{
         })
     }
 
+    animation = () => {
+        this.setState({
+            selected:this.state.selected === false ? true : false
+        })
+    }
+
     render(){
         return(
-            <nav>
+            <nav className='animated fadeInUpBig'>
                 <MediaQuery query="(min-width: 420px)">
                         <ul className='menu'>
-                            <li key='home'>
-                                <NavLink exact to='/'
-                                         className='navText'
-                                         activeClassName="active">Home</NavLink>
-                            </li>
-                            <li key='map'>
-                                <NavLink to='/map'
-                                         className='navText'
-                                         activeClassName="active">Mapa</NavLink>
-                            </li>
-                            <li key='aboutProject'>
-                                <NavLink to='/aboutProject'
-                                         className='navText'
-                                         activeClassName="active">O projekcie</NavLink>
-                            </li>
+                            {
+                                this.state.selected === true ?
+                                    <li key='home'>
+                                        <NavLink exact to='/'
+                                                 className='navText'
+                                                 activeClassName="active animated flipInX"
+                                                 onClick={this.animation}>Home</NavLink>
+                                    </li>
+                                    :
+                                    <li key='home'>
+                                        <NavLink exact to='/'
+                                                 className='navText'
+                                                 activeClassName="active"
+                                                 onClick={this.animation}>Home</NavLink>
+                                    </li>
+                            }
+                            {
+                                this.state.selected === true ?
+                                    <li key='map'>
+                                        <NavLink to='/map'
+                                                 className='navText'
+                                                 activeClassName="active animated flipInX"
+                                                 onClick={this.animation}>Mapa</NavLink>
+                                    </li>
+                                    :
+                                    <li key='map'>
+                                        <NavLink to='/map'
+                                                 className='navText'
+                                                 activeClassName="active"
+                                                 onClick={this.animation}>Mapa</NavLink>
+                                    </li>
+                            }
+                            {
+                                this.state.selected === true ?
+                                    <li key='aboutProject'>
+                                        <NavLink to='/aboutProject'
+                                                 className='navText'
+                                                 activeClassName="active animated flipInX"
+                                                 onClick={this.animation}>O projekcie</NavLink>
+                                    </li>
+                                    :
+                                    <li key='aboutProject'>
+                                        <NavLink to='/aboutProject'
+                                                 className='navText'
+                                                 activeClassName="active"
+                                                 onClick={this.animation}>O projekcie</NavLink>
+                                    </li>
+                            }
                         </ul>
                 </MediaQuery>
 
