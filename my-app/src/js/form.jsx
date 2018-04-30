@@ -66,7 +66,7 @@ class Form extends React.Component {
                             onChange={this.handleFormInputs}
                         />
                     </label>
-                    <label>Zapisz przydatne linki!
+                    <label>Zapisz interesujące Cię miasta!
                         <input
                             type='text'
                             id='link'

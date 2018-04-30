@@ -312,7 +312,7 @@ img.flag {
   color: #74020b;
   padding: .5rem 0; }
 
-input[type=text], input[type=number] {
+input[type=text], input[type=number], textarea {
   width: 100%;
   padding: .3rem;
   border-radius: 5px;
@@ -345,7 +345,8 @@ input[type=text], input[type=number] {
 
 .contentEditable {
   background-color: #d4d7cd;
-  color: #659980; }
+  color: #659980;
+  width: 90%; }
 
 .costs {
   color: #74020b; }

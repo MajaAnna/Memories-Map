@@ -183,9 +183,9 @@ class Links extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h1>Links: {this.state.link}</h1>
+                    this.state.disabled ? <h1>Miasta: {this.state.link}</h1>
                         :
-                        <h1 className='labels'>Links:
+                        <h1 className='labels'>Miasta:
                             <div className='contentEditable'>
                                 <ContentEditable
                                     html={this.state.link}
