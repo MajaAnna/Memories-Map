@@ -1,8 +1,10 @@
 .notesContainer{
   display:flex;
   flex-wrap:wrap;
+  justify-content: center;
 }
 .note{
+  align-items: flex-start;
   background-color:rgba($accentColor,.5);
   color:$darkColor;
   padding:.8rem;
@@ -20,4 +22,8 @@
 .contentEditable{
   background-color:$backgroundColor;
   color:$lightColorSecond;
+}
+
+.costs{
+  color:$accentColorSecond;
 }

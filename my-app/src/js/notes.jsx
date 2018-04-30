@@ -291,9 +291,9 @@ class Accomodation extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h2>Accomodation /per day: {this.state.accomodation}</h2>
+                    this.state.disabled ? <h1>Accomodation /per day: {this.state.accomodation}</h1>
                         :
-                        <h2 className='labels'>Accomodation /per day:
+                        <h1 className='labels'>Accomodation /per day:
                             <div className='contentEditable'>
                                 <ContentEditable
                                     html={this.state.accomodation}
@@ -301,7 +301,7 @@ class Accomodation extends React.Component{
                                     onChange={this.handleChange}
                                 />
                             </div>
-                        </h2>
+                        </h1>
 
                 }
                 <button onClick={this.editBtn} className='btn editBtn'>{this.state.editBtn}</button>
@@ -346,9 +346,9 @@ class Transportation extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h2>Transportation: {this.state.transportation}</h2>
+                    this.state.disabled ? <h1>Transportation: {this.state.transportation}</h1>
                         :
-                        <h2 className='labels'>Transportation:
+                        <h1 className='labels'>Transportation:
                             <div className='contentEditable'>
                                 <ContentEditable
                                     html={this.state.transportation}
@@ -356,7 +356,7 @@ class Transportation extends React.Component{
                                     onChange={this.handleChange}
                                 />
                             </div>
-                        </h2>
+                        </h1>
 
                 }
                 <button onClick={this.editBtn} className='btn editBtn'>{this.state.editBtn}</button>
@@ -401,9 +401,9 @@ class Food extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h2>Costs of food /per day: {this.state.food}</h2>
+                    this.state.disabled ? <h1>Costs of food /per day: {this.state.food}</h1>
                         :
-                        <h2 className='labels'>Costs of food /per day:
+                        <h1 className='labels'>Costs of food /per day:
                             <div className='contentEditable'>
                                 <ContentEditable
                                     html={this.state.food}
@@ -411,7 +411,7 @@ class Food extends React.Component{
                                     onChange={this.handleChange}
                                 />
                             </div>
-                        </h2>
+                        </h1>
 
                 }
                 <button onClick={this.editBtn} className='btn editBtn'>{this.state.editBtn}</button>
@@ -456,9 +456,9 @@ class OtherCosts extends React.Component{
         return(
             <div>
                 {
-                    this.state.disabled ? <h2>Other costs /per day: {this.state.other}</h2>
+                    this.state.disabled ? <h1>Other costs /per day: {this.state.other}</h1>
                         :
-                        <h2 className='labels'>Other costs:
+                        <h1 className='labels'>Other costs:
                             <div className='contentEditable'>
                                 <ContentEditable
                                     html={this.state.other}
@@ -466,7 +466,7 @@ class OtherCosts extends React.Component{
                                     onChange={this.handleChange}
                                 />
                             </div>
-                        </h2>
+                        </h1>
 
                 }
                 <button onClick={this.editBtn} className='btn editBtn'>{this.state.editBtn}</button>
@@ -498,7 +498,7 @@ class Sum extends React.Component{
         let costs = Math.floor(numberOfNights) * Math.round(accomodation + transportation + food + other)
         return(
             <h1 className='costs'>
-                Szacowany koszt podróży trwającej {numberOfNights} dni wynosi: {costs} zł.
+                Szacowany koszt podróży trwającej {numberOfNights} {numberOfNights === 1 ? 'dzień' : 'dni'} wynosi: {costs} zł.
             </h1>
         )
     }

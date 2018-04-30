@@ -36,6 +36,7 @@ class Navigation extends React.Component{
                                  activeClassName="active">O projekcie</NavLink>
                     </li>
                 </ul>
+                <span className='icon-menu hamburger iconBig' onClick={this.showMenu}></span>
             </nav>
         )
     }
