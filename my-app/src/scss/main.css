@@ -31,24 +31,21 @@
   .half {
     display: inline-block;
     padding: .3rem;
-    width: 50%;
-    text-align: center; } }
+    width: 45%;
+    text-align: center;
+    align-content: center; } }
 
 @media only screen and (max-width: 480px) {
   .note {
     width: 100vw; } }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 800px) {
   .note {
-    width: 40vw; } }
+    width: 43vw; } }
 
-@media only screen and (max-width: 420px) {
-  .hamburger {
-    display: inline-block; } }
-
-@media only screen and (min-width: 420px) {
-  .hamburger {
-    display: none; } }
+@media only screen and (min-width: 800px) {
+  .note {
+    width: 30vw; } }
 
 .btn {
   font-weight: bold;
@@ -217,18 +214,25 @@ header {
   color: #f3f3f4;
   border-bottom: 3px solid #e9a655;
   line-height: 100%;
-  padding: .3rem;
+  padding: .8rem;
   font-size: 1rem;
   width: 100vw; }
 
-.flexContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end; }
+.menu {
+  text-align: right; }
+
+.hamburgerIcon {
+  display: block;
+  text-align: right; }
 
 .menu li {
-  padding: 1.5rem;
-  text-align: center; }
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+  list-style-type: none; }
+
+.hamburger li {
+  display: block; }
 
 .navText {
   color: #beb5c5;
@@ -253,8 +257,9 @@ footer {
   padding: .3rem;
   font-size: .7rem; }
 
-.flexContainer {
-  display: flex; }
+.flexContainerFooter {
+  display: flex;
+  justify-content: center; }
 
 .footerText a {
   color: white;

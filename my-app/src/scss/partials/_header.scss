@@ -3,20 +3,29 @@ header{
   color:$lightColorText;
   border-bottom: 3px solid $accentColor;
   line-height:100%;
-  padding:.3rem;
+  padding:.8rem;
   font-size: 1rem;
   width:100vw;
 }
 
-.flexContainer{
-  display:flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+.menu{
+  text-align: right;
+}
+
+.hamburgerIcon{
+  display:block;
+  text-align:right;
 }
 
 .menu li{
-  padding:1.5rem;
+  display:inline-block;
+  padding:1rem;
   text-align:center;
+  list-style-type: none;
+}
+
+.hamburger li{
+  display:block;
 }
 
 .navText{

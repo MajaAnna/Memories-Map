@@ -2,6 +2,7 @@ import React from 'react';
 import {
     NavLink
 } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
 
 class Header extends React.Component{
     render(){
@@ -27,10 +28,9 @@ class Navigation extends React.Component{
     }
 
     showMenuFunc = () => {
-        console.log('ckklasdn')
         this.setState({
             showMenu:this.state.showMenu === true ? false : true,
-            hamburgerShow: this.state.hamburgerShow === true ? false : true,
+            hamburgerShow: false,
             hideMenu: this.state.hideMenu === true ? false : true
         })
     }
@@ -47,8 +47,7 @@ class Navigation extends React.Component{
     render(){
         return(
             <nav>
-                {
-                    this.state.showMenu === true ?
+                <MediaQuery query="(min-width: 420px)">
                         <ul className='menu'>
                             <li key='home'>
                                 <NavLink exact to='/'
@@ -65,22 +64,45 @@ class Navigation extends React.Component{
                                          className='navText'
                                          activeClassName="active">O projekcie</NavLink>
                             </li>
-                            {
-                                this.state.hideMenu === true ?
-                                    <li key='hideMenu'>
-                                        <span className='icon-cancel-circled iconBig' onClick={this.hideMenu}></span>
-                                    </li>
-                                    : null
-                            }
                         </ul>
-                        : null
-                }
+                </MediaQuery>
 
-                {
-                    this.state.hamburgerShow === true ?
-                        <span className='icon-menu hamburger iconBig' onClick={this.showMenuFunc}></span>
-                        : null
-                }
+
+                <MediaQuery query="(max-width: 420px)">
+                    {
+                        this.state.hamburgerShow === true ?
+                            <span className='icon-menu hamburgerIcon iconBig' onClick={this.showMenuFunc}></span>
+                            : null
+                    }
+                    {
+                        this.state.showMenu === true ?
+                            <ul className='menu hamburger'>
+                                <li key='home'>
+                                    <NavLink exact to='/'
+                                             className='navText'
+                                             activeClassName="active">Home</NavLink>
+                                </li>
+                                <li key='map'>
+                                    <NavLink to='/map'
+                                             className='navText'
+                                             activeClassName="active">Mapa</NavLink>
+                                </li>
+                                <li key='aboutProject'>
+                                    <NavLink to='/aboutProject'
+                                             className='navText'
+                                             activeClassName="active">O projekcie</NavLink>
+                                </li>
+                                {
+                                    this.state.hideMenu === true ?
+                                        <li key='hideMenu'>
+                                            <span className='icon-cancel-circled iconBig' onClick={this.hideMenu}></span>
+                                        </li>
+                                        : null
+                                }
+                            </ul>
+                            : null
+                    }
+                </MediaQuery>
             </nav>
         )
     }

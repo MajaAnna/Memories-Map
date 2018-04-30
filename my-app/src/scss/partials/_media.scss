@@ -41,8 +41,9 @@
   .half{
     display:inline-block;
     padding:.3rem;
-    width:50%;
+    width:45%;
     text-align:center;
+    align-content:center;
   }
 
 }
@@ -54,27 +55,14 @@
   }
 }
 
-@media only screen and (min-width:480px){
+@media only screen and (min-width:800px){
   .note{
-    width:40vw;
+    width:43vw;
   }
 }
 
-//MENU
-@media only screen and (max-width:420px){
-  .hamburger{
-    display:inline-block;
+@media only screen and (min-width:800px){
+  .note{
+    width:30vw;
   }
-  //.menu li{
-  //  display:none;
-  //}
-}
-
-@media only screen and (min-width:420px){
-  .hamburger{
-    display:none;
-  }
-  //.menu li{
-  //  display:inline-block;
-  //}
 }
