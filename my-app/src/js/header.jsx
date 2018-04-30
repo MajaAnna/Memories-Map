@@ -48,7 +48,7 @@ class Navigation extends React.Component{
 
     animation = () => {
         this.setState({
-            selected:this.state.selected === false ? true : false
+            selected:true
         })
     }
 
