@@ -1,5 +1,7 @@
 import React from 'react';
 import ContentEditable from 'react-contenteditable'
+import "../../node_modules/animate.css/animate.min.css";
+
 
 class Notes extends React.Component{
     render(){
@@ -498,7 +500,7 @@ class Sum extends React.Component{
         let costs = Math.floor(numberOfNights) * Math.round(accomodation + transportation + food + other)
         return(
             <h1 className='costs'>
-                Szacowany koszt podróży trwającej {numberOfNights} {numberOfNights === 1 ? 'dzień' : 'dni'} wynosi: {costs} zł.
+                Szacowany koszt podróży trwającej {numberOfNights} {numberOfNights === 1 ? 'dzień' : 'dni'} wynosi: <span className='animated zoomIn'>{costs}</span> zł.
             </h1>
         )
     }
