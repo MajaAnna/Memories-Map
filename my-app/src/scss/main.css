@@ -43,14 +43,10 @@
     width: 40vw; } }
 
 @media only screen and (max-width: 420px) {
-  .menu li {
-    display: none; }
   .hamburger {
     display: inline-block; } }
 
 @media only screen and (min-width: 420px) {
-  .menu li {
-    display: inline-block; }
   .hamburger {
     display: none; } }
 

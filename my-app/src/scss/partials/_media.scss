@@ -62,19 +62,19 @@
 
 //MENU
 @media only screen and (max-width:420px){
-  .menu li{
-    display:none;
-  }
   .hamburger{
     display:inline-block;
   }
+  //.menu li{
+  //  display:none;
+  //}
 }
 
 @media only screen and (min-width:420px){
-  .menu li{
-    display:inline-block;
-  }
   .hamburger{
     display:none;
   }
+  //.menu li{
+  //  display:inline-block;
+  //}
 }
