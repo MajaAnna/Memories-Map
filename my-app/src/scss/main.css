@@ -47,7 +47,7 @@
   .note {
     width: 43vw; } }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .note {
     width: 30vw; } }
 
@@ -259,7 +259,7 @@ footer {
   border-top: 3px solid #e9a655;
   line-height: 100%;
   padding: .3rem;
-  font-size: .7rem; }
+  font-size: 1rem; }
 
 .flexContainerFooter {
   display: flex;
