@@ -1,0 +1,29 @@
+.btn{
+  font-weight: bold;
+  padding:.5rem;
+  margin: .5rem 0;
+  border-radius:5px;
+  //margin:.5rem;
+  display:inline-block;
+  background-color:rgba($darkColor,.4);
+  cursor:pointer;
+  -webkit-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  -moz-box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  box-shadow: 2px 2px 4px 0px rgba(50,54,63,1);
+  border: none;
+  color:$accentColorSecond;
+}
+
+.addNoteBtn{
+  background-color:rgba($lightColorSecond,.4);
+  color:$darkColor;
+}
+
+.deleteNoteBtn{
+  background-color:rgba($accentColorSecond,.4);
+  color:$darkColor;
+}
+
+.editBtn{
+  display:inline-block;
+}

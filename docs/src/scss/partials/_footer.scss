@@ -1,0 +1,26 @@
+footer{
+  background-color:$darkColor;
+  color:$lightColorText;
+  border-top: 3px solid $accentColor;
+  line-height:100%;
+  padding:.3rem;
+  font-size: 1rem;
+
+}
+.flexContainerFooter{
+  display:flex;
+  justify-content: center;
+}
+
+.footerText a{
+  color:white;
+  text-decoration:none;
+}
+
+.footerText:hover{
+  font-weight:bold;
+}
+
+.copy{
+  margin-top:.8rem;
+}
