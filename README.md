@@ -17,6 +17,7 @@ There is a form attached with questions about:
 - costs of the journey (which will by counted to estimate the final costs)
 
 All the notes are saved in local storage. They can be edited and deleted then.
+Life preview is available here: http://memoriesmap.cba.pl/#/
 
 ## The website is written using:
 - React
